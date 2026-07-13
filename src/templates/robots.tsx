@@ -18,3 +18,4 @@ export const render = (data: TemplateRenderProps) => {
 Sitemap: https://${data.document.siteDomain}/sitemap.xml
 `;
 };
+ 
