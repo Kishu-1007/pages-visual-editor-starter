@@ -1,0 +1,1 @@
+export {HeroConfig, type HeroConfigProps} from "./HeroConfig";

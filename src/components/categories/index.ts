@@ -1,0 +1,1 @@
+export { HeroCategory } from "./HeroCategory";

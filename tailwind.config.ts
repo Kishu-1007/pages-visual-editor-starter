@@ -6,7 +6,9 @@ import {
   VisualEditorComponentsContentPath,
   VisualEditorThemeClassSafelist
 } from "@yext/visual-editor";
+import {projectTailwindExtensions} from "./src/theme/projectTailwindExtensions";
 import { ComponentsContentPath as SearchUIComponentsContentPath } from "@yext/search-ui-react";
+import themeConfig from "./src/theme/theme.config";
 
 export default {
   content: [
@@ -16,7 +18,9 @@ export default {
   ],
   safelist: VisualEditorThemeClassSafelist,
   theme: {
-    extend: themeResolver(defaultThemeTailwindExtensions, defaultThemeConfig),
+    extend: themeResolver(projectTailwindExtensions, themeConfig,
+      
+    ),
   },
   plugins: [],
 } satisfies Config;
