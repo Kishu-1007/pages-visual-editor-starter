@@ -7,7 +7,7 @@ buildConfiguration:
       - package-lock.json
       - .npmrc
 livePreviewConfiguration:
-  serveCommand: "npm run dev -- --port 5173"
+  serveCommand: "npm run dev"
   setupCommand: ":"
 siteStream:
   id: site-stream
