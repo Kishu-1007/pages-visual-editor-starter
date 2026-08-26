@@ -6,6 +6,8 @@ buildConfiguration:
       - package.json
       - package-lock.json
       - .npmrc
+      - .yextrc
+      - sites-config/features.json
 livePreviewConfiguration:
   serveCommand: "npm run dev -- --port 8080"
   setupCommand: ":"
