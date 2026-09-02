@@ -13,3 +13,6 @@ functions/functionMetadata.json
 .idea/*
 
 .DS_Store
+
+!.yextrc
+!sites-config/features.json

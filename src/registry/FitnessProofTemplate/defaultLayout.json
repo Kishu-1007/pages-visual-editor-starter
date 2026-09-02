@@ -1,0 +1,33 @@
+{
+  "root": {
+    "props": {
+      "title": {
+        
+        "field": "name",
+        "constantValue": "",
+        "constantValueEnabled": false
+      },
+      "description": {
+        "field": "description",
+        "constantValue": "",
+        "constantValueEnabled": false
+      }
+    }
+  },
+  "zones": {},
+  "content": [
+    {
+      "type": "ProofSection",
+      "props": {
+        "text": {
+          "field": "name",
+          "constantValue": {
+            "defaultValue": "Visual Editor bespoke template is working."
+          },
+          "constantValueEnabled": true
+        },
+        "textAlignment": "center"
+      }
+    }
+  ]
+}

@@ -6,9 +6,9 @@
   "license": "BSD-3-Clause",
   "type": "module",
   "scripts": {
-    "dev": "pages dev",
+    "dev": "pages dev --port 8080",
     "prod": "pages prod",
-    "build": "pages build -- --pluginTotalFilesizeLimit 15",
+    "build": "pages build",
     "typecheck": "tsc --noEmit",
     "generate:template-configs": "node --import tsx scripts/generateTemplateConfig.ts"
   },
@@ -34,7 +34,7 @@
     "@yext/pages-components": "2.2.0",
     "@yext/search-headless-react": "^2.7.1",
     "@yext/search-ui-react": "^3.0.1",
-    "@yext/visual-editor": "https://github.com/asanehisa/public-assets/raw/main/yext-visual-editor-1.4.2.tgz",
+    "@yext/visual-editor": "file:../pages-visual-editor-starter-platform-templates-mission/yext-visual-editor-1.4.2.tgz",
     "awesome-phonenumber": "^7.8.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",

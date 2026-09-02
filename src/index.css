@@ -1,3 +1,241 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Fitness global design tokens extracted from the provided rendered page source.
+   Yext's default theme remains the base theme; these tokens provide the Fitness layer. */
+
+   :root {
+  --fitness-red: #ff0000;
+  --fitness-red-hover: #dc2626;
+  --fitness-black: #000000;
+  --fitness-charcoal: #222222;
+  --fitness-dark: #1c1c1c;
+  --fitness-white: #ffffff;
+  --fitness-gray-900: #111827;
+  --fitness-gray-800: #1f2937;
+  --fitness-gray-700: #374151;
+  --fitness-gray-600: #4b5563;
+  --fitness-gray-500: #6b7280;
+  --fitness-gray-300: #d1d5db;
+  --fitness-gray-200: #e5e7eb;
+  --fitness-gray-100: #f3f4f6;
+  --fitness-gray-50: #f9fafb;
+
+  --fitness-font-heading: "Montserrat", Arial, sans-serif;
+  --fitness-font-body: "Roboto", Arial, sans-serif;
+
+  --fitness-container: 1400px;
+  --fitness-content-container: 1280px;
+  --fitness-radius: 0.5rem;
+  --fitness-form-radius: 0.375rem;
+  --fitness-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+  --fitness-transition: 300ms ease;
+  --fitness-motion: 600ms ease;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    background: var(--fitness-white);
+    color: var(--fitness-gray-700);
+    font-family: var(--fitness-font-body);
+    line-height: 1.7;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+    color: var(--fitness-gray-900);
+    font-family: var(--fitness-font-heading);
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  button,
+  input,
+  textarea,
+  select {
+    font: inherit;
+  }
+}
+
+@layer components {
+  .fitness-container {
+    width: 100%;
+    max-width: var(--fitness-container);
+    margin-inline: auto;
+    padding-inline: 1rem;
+  }
+
+  .fitness-content-container {
+    width: 100%;
+    max-width: var(--fitness-content-container);
+    margin-inline: auto;
+    padding-inline: 2rem;
+  }
+
+  .fitness-section {
+    padding-block: 4rem;
+    background: var(--fitness-white);
+  }
+
+  .fitness-section--large {
+    padding-block: 4rem;
+  }
+
+  .fitness-eyebrow {
+    margin-bottom: 0.5rem;
+    color: var(--fitness-red);
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    line-height: 1.25;
+    text-transform: uppercase;
+  }
+
+  .fitness-heading {
+    color: var(--fitness-gray-900);
+    font-family: var(--fitness-font-heading);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+
+  .fitness-heading--xl {
+    font-size: clamp(2.25rem, 6vw, 5.25rem);
+  }
+
+  .fitness-heading--lg {
+    font-size: clamp(2rem, 4vw, 3.75rem);
+  }
+
+  .fitness-heading--md {
+    font-size: clamp(1.5rem, 3vw, 2.25rem);
+  }
+
+  .fitness-copy {
+    color: var(--fitness-gray-700);
+    font-family: var(--fitness-font-body);
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .fitness-copy--accent {
+    color: var(--fitness-red);
+    font-size: 1.125rem;
+    font-weight: 700;
+  }
+
+  .fitness-button {
+    position: relative;
+    display: inline-block;
+    border: 2px solid #959595;
+    border-radius: 0;
+    background: transparent;
+    color: var(--fitness-charcoal);
+    font-family: var(--fitness-font-heading);
+    font-size: 0.9375rem;
+    font-weight: 600;
+    line-height: 1.875rem;
+    padding: 0.625rem 2.25rem;
+    text-transform: capitalize;
+    transition:
+      color var(--fitness-transition),
+      border-color var(--fitness-transition),
+      background-color var(--fitness-transition),
+      transform var(--fitness-motion);
+  }
+
+  .fitness-button:hover,
+  .fitness-button:focus-visible {
+    border-color: var(--fitness-red);
+    background: var(--fitness-red);
+    color: var(--fitness-white);
+    outline: none;
+  }
+
+  .fitness-card {
+    border: 1px solid var(--fitness-gray-200);
+    border-radius: var(--fitness-radius);
+    background: linear-gradient(135deg, var(--fitness-white), var(--fitness-gray-50));
+    box-shadow: var(--fitness-shadow);
+  }
+
+  .fitness-form-control {
+    width: 100%;
+    border: 1px solid var(--fitness-gray-300);
+    border-radius: var(--fitness-form-radius);
+    background: var(--fitness-white);
+    color: var(--fitness-gray-800);
+    padding: 0.75rem 1rem;
+    transition: border-color var(--fitness-transition), box-shadow var(--fitness-transition);
+  }
+
+  .fitness-form-control:focus {
+    border-color: var(--fitness-red);
+    box-shadow: 0 0 0 2px rgba(255, 0, 0, 0.15);
+    outline: none;
+  }
+
+  .fitness-link-accent {
+    transition: color var(--fitness-transition);
+  }
+
+  .fitness-link-accent:hover,
+  .fitness-link-accent:focus-visible {
+    color: var(--fitness-red-hover);
+  }
+}
+
+@layer utilities {
+  .fitness-text-red { color: var(--fitness-red); }
+  .fitness-text-dark { color: var(--fitness-charcoal); }
+  .fitness-text-muted { color: var(--fitness-gray-600); }
+  .fitness-bg-red { background-color: var(--fitness-red); }
+  .fitness-bg-dark { background-color: var(--fitness-charcoal); }
+  .fitness-border-red { border-color: var(--fitness-red); }
+}
+
+@media (min-width: 640px) {
+  .fitness-container { padding-inline: 1.5rem; }
+  .fitness-content-container { padding-inline: 1.5rem; }
+}
+
+@media (min-width: 1024px) {
+  .fitness-section { padding-block: 6rem; }
+  .fitness-section--large { padding-block: 8rem; }
+  .fitness-container { padding-inline: 3rem; }
+  .fitness-content-container { padding-inline: 3rem; }
+}
+
+@media (min-width: 1280px) {
+  .fitness-section--large { padding-block: 10rem; }
+}
+
+@keyframes fitness-fade-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(36px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fitness-fade-in-right {
+  animation: fitness-fade-in-right 600ms ease both;
+}
