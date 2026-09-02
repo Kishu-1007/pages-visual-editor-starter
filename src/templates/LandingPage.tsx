@@ -6,11 +6,26 @@ import type {
   TemplateConfig,
   TemplateProps,
   TemplateRenderProps,
-  TransformProps
+  TransformProps,
+  GetHeadConfig,
+  HeadConfig,
 } from "@yext/pages";
 
 import { GetPath } from "@yext/pages";
-import { VisualEditorProvider, Editor } from "@yext/visual-editor";
+import {
+  applyTheme,
+  VisualEditorProvider,
+  Editor,
+  resolveUrlTemplate,
+  getPageMetadata,
+  applyAnalytics,
+  applyHeaderScript,
+  applyCertifiedFacts,
+  migrate,
+  migrationRegistry,
+  defaultThemeConfig,
+  injectTranslations,
+} from "@yext/visual-editor";
 import themeConfig from "../theme/theme.config";
 import PageLayout from "../components/layout/PageLayout";
 import { useDocument } from "@yext/visual-editor";
@@ -22,7 +37,6 @@ import { componentRegistry } from "../ve.config";
 import { usePlatformBridgeDocument, usePlatformBridgeEntityFields } from "@yext/visual-editor";
 import { projectTailwindExtensions } from "../theme/projectTailwindExtensions";
 import { StreamDocument } from "@yext/visual-editor";
-import { migrate, migrationRegistry } from "@yext/visual-editor";
 
 // import PageLayout from "../components/PageLayout";
 // import FitAboutSection from "../components/A-FitpageCom/FitAboutSection";
@@ -67,11 +81,14 @@ export const config: TemplateConfig = {
   },
 };
 
-export const getPath: GetPath<TemplateProps> = ({ document }) => {
-  return document.slug;
+export const getPath: GetPath<TemplateRenderProps> = ({
+  document,
+ }) => {
+  return (document.slug);
 }; 
 
-export const getHeadConfig = () => {
+export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = (data): HeadConfig => {
+  const { document, relativePrefixToRoot } = data;
   return {
     title: "Fitness Program",
     charset: "UTF-8",
@@ -96,21 +113,17 @@ export const transformProps: TransformProps<TemplateProps> = async (props) => {
     });
 
     document.__.layout = JSON.stringify(resolvedPuckData);
-  }
 
-  return { ...props, document };
+  }
+  const translations = await injectTranslations(document);
+
+  return { ...props, document, translations };
 };
 
 
 
-const FitnessProgramResultsDetailPage: Template<
-  TemplateRenderProps<FitnessLandingPage>
-> = (props) => {
-  // const entityDocument = usePlatformBridgeDocument();
-  // const entityFields = usePlatformBridgeEntityFields();
-  
+const FitnessProgramResultsDetailPage: Template<TemplateRenderProps<FitnessLandingPage>> = (props) => {
   const { __meta, document } = props;
-  // console.log(props.document.slug, "path value");
   // Visual Editor injects layout metadata at runtime
   const veDocument = document as any;
 
@@ -118,10 +131,6 @@ const FitnessProgramResultsDetailPage: Template<
   const layoutData = veDocument.__?.layout
     ? JSON.parse(veDocument.__.layout)
     : { content: [
-      // {
-      //     type: "HeroConfig",
-      //     props: {},
-      //   },
     ] };
 
 

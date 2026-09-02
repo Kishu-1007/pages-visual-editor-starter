@@ -18,9 +18,7 @@ export default {
   ],
   safelist: VisualEditorThemeClassSafelist,
   theme: {
-    extend: themeResolver(projectTailwindExtensions, themeConfig,
-      
-    ),
+    extend: themeResolver(projectTailwindExtensions, themeConfig),
   },
   plugins: [],
 } satisfies Config;
