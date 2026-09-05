@@ -9,8 +9,8 @@ buildConfiguration:
       - .yextrc
       - sites-config/features.json
 livePreviewConfiguration:
-  serveCommand: "npm run dev -- --port 8080"
   setupCommand: ":"
+  serveCommand: "npm run dev -- --port 8080"
 siteStream:
   id: site-stream
   entityId: site

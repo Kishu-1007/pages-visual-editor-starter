@@ -11,9 +11,11 @@ export default defineConfig({
     }), yextSSG()],
 
     server: {
-    // historyApiFallback: true,
+     // historyApiFallback: true,
     port: 8080,
     strictPort: true,
+    open: '/edit',     // Opens/pivots the server root path immediately into the edit route. Forces the preview instance to initialize at http://localhost:8080/edit
+    host: 'localhost' // Ensures it binds strictly to 'localhost' instead of 127.0.0.1
     // cors: true,
   },
   
