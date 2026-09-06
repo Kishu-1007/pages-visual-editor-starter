@@ -15,8 +15,12 @@ export default defineConfig({
     port: 8080,
     strictPort: true,
     open: '/edit',     // Opens/pivots the server root path immediately into the edit route. Forces the preview instance to initialize at http://localhost:8080/edit
-    host: 'localhost' // Ensures it binds strictly to 'localhost' instead of 127.0.0.1
+    host: 'localhost', // Ensures it binds strictly to 'localhost' instead of 127.0.0.1
     // cors: true,
+    hmr: {
+      protocol: 'wss',   // Force secure web sockets for the sandbox
+      clientPort: 443    // Force traffic through the standard HTTPS port
+    }
   },
   
   // Add this block to force the library test router into active state
