@@ -57,15 +57,16 @@ const FitnessProofTemplate = {
       // "businessId",
   ],
     localization: {
-      locales: ["en-GB"],
+      locales: ["en_GB"],
   },
+  
 };
 
 
 const config = {
   defaults: {
     templateId: "directory",
-    locale: ["en", "en-GB"],
+    locale: ["en", "en_GB"], 
   },
   templates: {
     "directory": {

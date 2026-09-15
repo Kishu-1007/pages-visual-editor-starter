@@ -15,7 +15,7 @@ siteStream:
   id: site-stream
   entityId: site
   fields:
-  - name
+   - name
   localization:
    locales:
    - en
