@@ -100,6 +100,10 @@ const config = {
       ...FitnessProofTemplate,
       $id: "local-editor-fitness-proof-template-stream", 
     },
+
+    additionalProperties: {
+        isVETemplate: true,
+      },
   },
   },
 } satisfies LocalEditorConfig;
