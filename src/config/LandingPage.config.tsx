@@ -5,33 +5,34 @@ import { mainConfig, MainConfigProps } from "@yext/visual-editor";
 // import { HeroConfigProps } from "../components/componentRegistry/HeroConfig";
 import HeroConfig, { HeroConfigProps } from "../components/componentConfig/HeroConfig";
 import { HeroComponents } from "../components/componentGroups";
+import { locatorConfig } from "@yext/visual-editor";
 
 
-export interface LandingPageConfigProps extends MainConfigProps {
- HeroConfig: HeroConfigProps
+ interface LandingPageConfigProps extends MainConfigProps, HeroConfigProps {
+//  HeroConfig: HeroConfigProps
 }
 
-export const landingPageConfig: Config<LandingPageConfigProps> = {
-  components: {
-    ...mainConfig.components,
-    ...HeroComponents,
+// export const landingPageConfig: Config<LandingPageConfigProps> = {
+//   components: {
+//     ...mainConfig.components,
+//     ...HeroComponents,
 
-    // HeroSection: {
-    //   fields: {},
-    //   render: (_props) => React.createElement(HeroSection),
-    // },
-  },
+//     // HeroSection: {
+//     //   fields: {},
+//     //   render: (_props) => React.createElement(HeroSection),
+//     // },
+//   },
 
-  categories: {
-    ...mainConfig.categories,
+//   categories: {
+//     ...mainConfig.categories,
 
-    sections: {
-      components: ["HeroConfig"],
-    },
-  },
+//     // sections: {
+//     //   components: ["HeroConfig"],
+//     // },
+//   },
 
-  root: mainConfig.root,
-};
+//   root: mainConfig.root,
+// };
 
 // export const componentRegistry: Record<string, Config<any>> = {
 //    FitnessProgramResultsDetailPage: landingPageConfig,

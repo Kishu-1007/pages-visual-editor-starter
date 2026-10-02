@@ -8,10 +8,7 @@
   "scripts": {
     "dev": "pages dev --port 8080",
     "prod": "pages prod",
-    "build": "pages build -- --pluginTotalFilesizeLimit 15",
-    "typecheck": "tsc --noEmit",
-    "generate:template-configs": "node --import tsx scripts/generateTemplateConfig.ts",
-    "components": "REGISTRY_URL=https://reliably-numerous-kit.pgsdemo.com/components npx shadcn@2.3.0 add"
+    "build": "pages build -- --pluginTotalFilesizeLimit 15"
   },
   "engines": {
     "node": ">=20.18.2"
