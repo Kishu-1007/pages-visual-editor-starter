@@ -52,7 +52,7 @@ const FitnessProofTemplate = {
       "c_fitnessServicesInformation",
       "frequentlyAskedQuestions",
       // "siteDomain",
-      // "siteId",
+      "siteId",
       // "siteInternalHostName",
       // "businessId",
   ],
@@ -65,45 +65,45 @@ const FitnessProofTemplate = {
 
 const config = {
   defaults: {
-    templateId: "directory",
+    templateId: "FitnessProofTemplate",
     locale: ["en", "en_GB"], 
   },
   templates: {
-    "directory": {
-      // stream: {
-      //   filter: { entityTypes: ["ce_city", "ce_region", "ce_state", "ce_root"] },
-      //   $id: "local-editor-directory-stream",
-      //   fields: [
-      //     "dm_directoryParents.name",
-      //     "dm_directoryParents.slug",
-      //     "dm_directoryChildren.name",
-      //     "dm_directoryChildren.address",
-      //     "dm_directoryChildren.slug",
-      //   ],
-      // },
-    },
-    "locator": {
-      // stream: {
-      //   filter: { entityTypes: ["locator"] },
-      //   $id: "local-editor-locator-stream",
-      //   fields: [],
-      // },
-    },
-    "main": {
-      stream: {
-        ...baseLocationStream,
-        $id: "local-editor-main-stream",
-      },
-    },
+    // "directory": {
+    //   // stream: {
+    //   //   filter: { entityTypes: ["ce_city", "ce_region", "ce_state", "ce_root"] },
+    //   //   $id: "local-editor-directory-stream",
+    //   //   fields: [
+    //   //     "dm_directoryParents.name",
+    //   //     "dm_directoryParents.slug",
+    //   //     "dm_directoryChildren.name",
+    //   //     "dm_directoryChildren.address",
+    //   //     "dm_directoryChildren.slug",
+    //   //   ],
+    //   // },
+    // },
+    // "locator": {
+    //   // stream: {
+    //   //   filter: { entityTypes: ["locator"] },
+    //   //   $id: "local-editor-locator-stream",
+    //   //   fields: [],
+    //   // },
+    // },
+    // "main": {
+    //   stream: {
+    //     ...baseLocationStream,
+    //     $id: "local-editor-main-stream",
+    //   },
+    // },
     "FitnessProofTemplate": {
     stream: {
       ...FitnessProofTemplate,
       $id: "local-editor-fitness-proof-template-stream", 
     },
 
-    additionalProperties: {
-        isVETemplate: true,
-      },
+    // additionalProperties: {
+    //     isVETemplate: true,
+    //   },
   },
   },
 } satisfies LocalEditorConfig;
