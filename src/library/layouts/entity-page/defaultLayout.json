@@ -1,0 +1,15 @@
+{
+  "content": [],
+  "root": {
+    "props": {}
+  },
+  "sections": [
+    {
+      "type": "location-hero",
+      "props": {
+        "title": "Welcome to our Location Page!"
+      }
+    }
+  ],
+  "zones": {}
+}
