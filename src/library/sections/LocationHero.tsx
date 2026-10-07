@@ -7,7 +7,7 @@ type LocationHeroProps = {
 };
 
 // 2. The core object configuration matching Yext's exact layout schema
-export const locationHero: YextComponentConfig<LocationHeroProps> = {
+export const LocationHero: YextComponentConfig<LocationHeroProps> = {
   label: "Location Hero Banner",
   fields: {
     title: {

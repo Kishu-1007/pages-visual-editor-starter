@@ -7,7 +7,6 @@ import { Address as SharedComponent4 } from "./components/contentBlocks/Address"
 import { HoursStatus as SharedComponent5 } from "./components/contentBlocks/HoursStatus";
 import { Phone as SharedComponent6 } from "./components/contentBlocks/Phone";
 import { directoryRootConfig, locatorRootConfig } from "./roots";
-import { locationHero } from "../sections/LocationHero";
 
 /** Hidden internal Puck components referenced by saved Directory layout data. */
 export const sharedComponentMetadata = [

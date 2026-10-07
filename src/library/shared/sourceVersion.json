@@ -11,6 +11,6 @@
     "components/contentBlocks/HoursStatus.tsx",
     "components/contentBlocks/image/Image.tsx",
     "components/contentBlocks/Phone.tsx",
-    "../sections/locationHero.tsx"
+    "../sections/LocationHero.tsx"
   ]
 }
