@@ -1,0 +1,58 @@
+{
+  "root": {
+    "props": {
+      "version": 1,
+      "title": {
+        "field": "name",
+        "constantValue": {
+          "defaultValue": "PLACEHOLDER"
+        },
+        "constantValueEnabled": false
+      },
+      "description": {
+        "field": "description",
+        "constantValue": {
+          "defaultValue": "PLACEHOLDER"
+        },
+        "constantValueEnabled": false
+      }
+    },
+    "type": "root"
+  },
+  "content": [
+    {
+      "type": "MainContent",
+      "props": {
+        "id": "MainContent-location-root-wrapper",
+        "content": [
+          {
+            "type": "LocationHero",
+            "props": {
+              "id": "LocationHero-testing-component-id",
+              "styles": {
+                "backgroundColor": {
+                  "selectedColor": "white",
+                  "contrastingColor": "black"
+                }
+              },
+              "slots": {},
+              "analytics": {
+                "scope": "entity"
+              },
+              "data": {
+                "title": {
+                  "field": "name",
+                  "constantValue": {
+                    "defaultValue": "Welcome to our Location!"
+                  },
+                  "constantValueEnabled": false
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "zones": {}
+}

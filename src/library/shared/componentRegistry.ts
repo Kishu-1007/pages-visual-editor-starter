@@ -40,5 +40,5 @@ export const sharedRootPageSetTypes = ["ENTITY","DIRECTORY", "LOCATOR"] as const
 export const sharedRootAllowedComponentIds: Partial<Record<string, string[]>> = {
   DIRECTORY: ["MainContent", "CustomCodeSection"],
   LOCATOR: ["MainContent", "CustomCodeSection"],
-  ENTITY: ["MainContent", "location-hero", "CustomCodeSection"],
+  ENTITY: ["MainContent", "LocationHero", "CustomCodeSection"],
 };
