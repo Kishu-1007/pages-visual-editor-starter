@@ -8,5 +8,16 @@ buildConfiguration:
       - .npmrc
 livePreviewConfiguration:
   setupCommand: ":"
-
-    
+# responseHeaders:
+#   - pathPattern: "http://localhost/.*"
+#     headerKey: "Access-Control-Allow-Origin"
+#     headerValues:
+#       - "*"
+# siteStream:
+  # id: site-stream
+  # entityId: site
+  # fields:
+  #  - c_templateVisualConfiguration
+  # localization:
+  #  locales:
+  #  - en

@@ -13,4 +13,24 @@ export default defineConfig({
     }),
     yextSSG(),
   ],
+  
+  // server: {
+  //   // port: 5173,
+  //   // strictPort: true,
+  //   // // Forces Vite to intercept cross-origin rules for Yext's useMessage hook
+  //   // headers: {
+  //   //   "Access-Control-Allow-Origin": "http://localhost",
+  //   //   "Access-Control-Allow-Private-Network": "true"
+  //   // },
+  //   // // Allows the proxy origin checks to skip the port validation structure
+  //   // cors: {
+  //   //   origin: "http://localhost",
+  //   //   credentials: true
+  //   // }
+  // },
+  // Overrides Vite's internal global variables during local dev compilation
+  // define: {
+  //   "window.location.origin": '"http://localhost"'
+  // }
+
 });

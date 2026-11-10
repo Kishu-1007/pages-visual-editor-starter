@@ -1,0 +1,85 @@
+{
+  "features": [
+    {
+      "name": "robots",
+      "templateType": "JS",
+      "staticPage": {}
+    },
+    {
+      "name": "mission-section-library-locator",
+      "templateType": "JS",
+      "staticPage": {}
+    },
+    {
+      "name": "mission-section-library-directory",
+      "templateType": "JS",
+      "staticPage": {}
+    },
+    {
+      "name": "mission-entity-layout",
+      "templateType": "JS",
+      "staticPage": {}
+    },
+    {
+      "name": "local-editor",
+      "templateType": "JS",
+      "staticPage": {}
+    },
+    {
+      "name": "local-editor-data-mission-section-library-directory",
+      "templateType": "JS",
+      "staticPage": {}
+    },
+    {
+      "name": "local-editor-data-mission-entity-layout",
+      "streamId": "local-editor-entity-stream",
+      "templateType": "JS",
+      "entityPageSet": {}
+    },
+    {
+      "name": "edit-mission-section-library-locator",
+      "templateType": "JS",
+      "staticPage": {}
+    },
+    {
+      "name": "edit-mission-section-library-directory",
+      "templateType": "JS",
+      "staticPage": {}
+    },
+    {
+      "name": "edit-mission-entity-layout",
+      "templateType": "JS",
+      "staticPage": {}
+    }
+  ],
+  "streams": [
+    {
+      "$id": "local-editor-entity-stream",
+      "filter": {
+        "entityTypes": [
+          "location"
+        ]
+      },
+      "fields": [
+        "id",
+        "name",
+        "slug",
+        "address",
+        "description",
+        "emails",
+        "hours",
+        "mainPhone",
+        "services",
+        "yextDisplayCoordinate"
+      ],
+      "localization": {
+        "locales": [
+          "en"
+        ],
+        "primary": false
+      },
+      "source": "knowledgeGraph",
+      "destination": "pages"
+    }
+  ]
+}

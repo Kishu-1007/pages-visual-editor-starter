@@ -28,6 +28,7 @@ const config = {
           "services",
           "yextDisplayCoordinate",
         ],
+        includeCertifiedFacts: true,
         localization: { locales: ["en"] },
       },
     },

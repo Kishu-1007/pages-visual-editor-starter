@@ -1,5 +1,5 @@
 {
-  "visualEditorVersion": "1.4.8",
+  "visualEditorVersion": "2.0.0-beta.1",
   "sourceRoots": [
     "components/sections/directory/Directory.tsx",
     "components/sections/locator/Locator.tsx",
