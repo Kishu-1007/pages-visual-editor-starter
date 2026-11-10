@@ -12,7 +12,7 @@ import { SectionConfig } from "@yext/visual-editor";
 
 // 1. Define data types mapping to the layout properties
 export interface LocationHeroData {
-  text: {
+  title: {
     field?: string;
     constantValueEnabled?: boolean;
     constantValue?: {
@@ -35,7 +35,7 @@ const locationHeroFields: YextFields<LocationHeroProps> = {
     type: "object",
     label: msg("fields.data", "Data Binding Options"),
     objectFields: {
-      text: {
+      title: {
         type: "entityField", // This string flag explicitly activates the live KG property mapping picker dropdown
         label: msg("fields.heroText", "Hero Title Text"),
         filter: {
@@ -54,10 +54,10 @@ const LocationHeroComponent: PuckComponent<LocationHeroProps> = ({ data }) => {
   // Resolution priority: 1. Constant Override Value -> 2. Live Knowledge Graph field value -> 3. Hardcoded Fallback
   let displayTitle = "Welcome to our Location!";
 
-  if (data?.text?.constantValueEnabled) {
-    displayTitle = data.text.constantValue?.defaultValue || displayTitle;
-  } else if (data?.text?.field && streamDocument) {
-    displayTitle = (streamDocument[data.text.field] as string) || displayTitle;
+  if (data?.title?.constantValueEnabled) {
+    displayTitle = data.title.constantValue?.defaultValue || displayTitle;
+  } else if (data?.title?.field && streamDocument) {
+    displayTitle = (streamDocument[data.title.field] as string) || displayTitle;
   }
 
   return (
@@ -75,7 +75,7 @@ export const LocationHero: YextComponentConfig<LocationHeroProps> = {
   fields: locationHeroFields,
   defaultProps: {
     data: {
-      text: {
+      title: {
         field: "name", // Automatically selects the entity 'name' property from the locations model on boot
         constantValueEnabled: false,
         constantValue: {
