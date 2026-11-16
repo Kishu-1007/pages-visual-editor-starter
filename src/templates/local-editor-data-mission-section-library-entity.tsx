@@ -36,9 +36,9 @@ type LocalEditorStreamConfig = {
   >;
 };
 
-const localEditorLayoutId = "mission-entity-layout";
+const localEditorLayoutId = "mission-section-library-entity";
 const localEditorPageSetType = "ENTITY";
-const localEditorDataTemplateName = "local-editor-data-mission-entity-layout";
+const localEditorDataTemplateName = "local-editor-data-mission-section-library-entity";
 
 const normalizeLocalEditorPagesStream = (
   streamConfig?: LocalEditorStreamDefinition

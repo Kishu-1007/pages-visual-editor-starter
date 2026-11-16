@@ -18,7 +18,7 @@ import {
 } from "@yext/visual-editor";
 import tailwindConfig from "../../tailwind.config";
 import { translationLoaders } from "../library/.generated/i18n";
-import { sectionLibraryConfig as LayoutConfig0 } from "../library/.generated/libraryConfig-mission-entity-layout";
+import { sectionLibraryConfig as LayoutConfig0 } from "../library/.generated/libraryConfig-mission-section-library-entity";
 import { sectionLibraryConfig as LayoutConfig1 } from "../library/.generated/libraryConfig-mission-section-library-directory";
 import { sectionLibraryConfig as LayoutConfig2 } from "../library/.generated/libraryConfig-mission-section-library-locator";
 const sectionLibraryMigrationRegistry: MigrationRegistry = [];
@@ -26,7 +26,7 @@ const sectionLibraryMigrationRegistry: MigrationRegistry = [];
 const DEFAULT_LOCAL_EDITOR_ROUTE = "/local-editor";
 const localEditorStylesheetHrefs: string[] = [];
 const componentRegistry: Record<string, Config<any>> = {
-    "mission-entity-layout": LayoutConfig0,
+    "mission-section-library-entity": LayoutConfig0,
   "mission-section-library-directory": LayoutConfig1,
   "mission-section-library-locator": LayoutConfig2,
 };
