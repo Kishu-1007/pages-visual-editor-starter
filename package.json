@@ -6,7 +6,7 @@
   "license": "BSD-3-Clause",
   "type": "module",
   "scripts": {
-    "dev": "pages dev --port 8080",
+    "dev": "pages dev",
     "prod": "pages prod",
     "build": "pages build",
     "typecheck": "tsc --noEmit",
