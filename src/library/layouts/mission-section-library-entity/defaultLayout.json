@@ -30,10 +30,6 @@
             "contrastingColor": "black"
           }
         },
-        "slots": {},
-        "analytics": {
-          "scope": "entity"
-        },
         "data": {
           "title": {
             "field": "name",
