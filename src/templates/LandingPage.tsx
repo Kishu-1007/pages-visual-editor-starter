@@ -61,7 +61,7 @@ import { StreamDocument } from "@yext/visual-editor";
 // import { FitnessLandingPage } from "../types/autogen";
 
 export const config: TemplateConfig = {
-    name: "FitnessLandingPage",
+    name: "FitnessProgramResultsDetailPage",
   stream: {
     $id: "FitnessLandingPageStream",
     filter: {
@@ -148,7 +148,7 @@ export const transformProps: TransformProps<TemplateProps> = async (data) => {
 
 
 
-const FitnessLandingPage: Template<TemplateRenderProps<FitnessLandingPage>> = (props) => {
+const FitnessProgramResultsDetailPage: Template<TemplateRenderProps<FitnessLandingPage>> = (props) => {
   // const [themeMode, setThemeMode] = React.useState<boolean>(false);
   //  const platformProps = useTemplateProps();
   //  const platformDocument = useDocument<FitnessLandingPage>();
@@ -232,7 +232,7 @@ const FitnessLandingPage: Template<TemplateRenderProps<FitnessLandingPage>> = (p
         metadata={{ streamDocument: document }}
       />
 
-      <Editor
+      {/* <Editor
       document={document}
       componentRegistry={componentRegistry}
       themeConfig={defaultThemeConfig}
@@ -240,7 +240,7 @@ const FitnessLandingPage: Template<TemplateRenderProps<FitnessLandingPage>> = (p
       // forceThemeMode
       // metadata={}
 
-      />
+      /> */}
       
       {/* LOCAL WORKSPACE HARNESS PREVIEW BANNER */}
       {/* <div style={{ maxWidth: "600px", margin: "40px auto", textAlign: "center", border: "1px dashed #cccccc", padding: "20px", borderRadius: "8px", background: "#ffffff" }}>
@@ -255,4 +255,4 @@ const FitnessLandingPage: Template<TemplateRenderProps<FitnessLandingPage>> = (p
 
 };
 
-export default FitnessLandingPage;
+export default FitnessProgramResultsDetailPage;
