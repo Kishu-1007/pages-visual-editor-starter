@@ -40,11 +40,10 @@ import PageLayout from "../components/layout/PageLayout";
 import FitnessLandingPage from "../types/autogen";
 import { Render, resolveAllData } from "@puckeditor/core";
 import HeroSection from "../components/componentsEditor/LandingPageSections/HeroSectionEditor";
-import { componentRegistry } from "../ve.config";
+import { componentRegistry, ModifiedMainConfig } from "../ve.config";
 import { projectTailwindExtensions } from "../theme/projectTailwindExtensions";
 import { disableHmrForStackBlitz } from "../utils";
 import { SchemaWrapper } from "@yext/pages-components";
-import { landingPageConfig } from "../ve.config";
 import { StreamDocument } from "@yext/visual-editor";
 
 
@@ -115,7 +114,7 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = (data): HeadCon
     applyHeaderScript(document), // applies the Header script from Site Configuration
     applyTheme(document, relativePrefixToRoot, defaultThemeConfig), // applies the theme styles (include default component styling)
     SchemaWrapper(document.schema), // applies the JSON-LD schema to the page
-    disableHmrForStackBlitz,
+    // disableHmrForStackBlitz,
 
   ].join("\n"),
   };
@@ -130,11 +129,11 @@ export const transformProps: TransformProps<TemplateProps> = async (data) => {
     const migratedData = migrate(
       JSON.parse(document.__.layout),
       migrationRegistry,
-      landingPageConfig,
+      ModifiedMainConfig,
       document
     );
 
-    const resolvedPuckData = await resolveAllData(migratedData, landingPageConfig, {
+    const resolvedPuckData = await resolveAllData(migratedData, ModifiedMainConfig, {
       streamDocument: document,
     });
 
@@ -227,7 +226,7 @@ const FitnessProgramResultsDetailPage: Template<TemplateRenderProps<FitnessLandi
     >
     <div className="fitness-rendered-root" style={{ fontFamily: "sans-serif", padding: "40px" }}>
       <Render
-        config={landingPageConfig}
+        config={ModifiedMainConfig}
         data={layoutData}
         metadata={{ streamDocument: document }}
       />

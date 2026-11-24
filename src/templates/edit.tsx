@@ -22,12 +22,13 @@ import {
 } from "@yext/pages";
 import { type Config } from "@puckeditor/core";
 import tailwindConfig from "../../tailwind.config";
+import { componentRegistry } from "../ve.config";
 
-const componentRegistry: Record<string, Config<any>> = {
-  main: mainConfig,
-  directory: directoryConfig,
-  locator: locatorConfig,
-};
+// const componentRegistry: Record<string, Config<any>> = {
+//   main: mainConfig,
+//   directory: directoryConfig,
+//   locator: locatorConfig,
+// };
 
 // Editor is available at /edit
 export const getPath: GetPath<TemplateProps> = () => {

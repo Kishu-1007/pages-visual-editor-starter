@@ -73,7 +73,26 @@ export const HeroSectionComponent: PuckComponent<HeroSectionEditorProps> = ({
   analytics,
 }) => {
   const { document: streamDocument } = useTemplateProps();
-  return <HeroSection />;
+  
+  return (
+    <section
+      style={{ backgroundColor: styles?.backgroundColor?.selectedColor }}
+      data-ya-scope={analytics?.scope}
+    >
+      {streamDocument?.c_heroBackgroundImage?.image && (
+        <Image image={streamDocument.c_heroBackgroundImage.image} />
+      )}
+      <h1>{streamDocument?.title}</h1>
+      <p>{streamDocument?.headline}</p>
+   
+        <span className="sr-only">Editing Hero Section</span>
+  
+    </section>
+
+
+  );
+  
+  // <HeroSection />;
 };
 
 
@@ -81,7 +100,7 @@ export const HeroSectionComponent: PuckComponent<HeroSectionEditorProps> = ({
 export const HeroSectionEditor: YextComponentConfig<HeroSectionEditorProps> = {
  label: msg("components.heroSection", "Hero Section"),
 
-  fields: heroFields,
+  fields: toPuckFields(heroFields),
 
   defaultProps: {
     styles: {

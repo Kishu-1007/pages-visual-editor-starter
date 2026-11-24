@@ -5,10 +5,10 @@ import "@yext/visual-editor/style.css";
 import "./index.css";
 
 // import {landingPageConfig} from "./config/LandingPage.config";
-import {mainConfig, MainConfigProps } from "@yext/visual-editor";
-import { HeroConfigProps } from "./components/componentConfig";
-import { HeroComponents } from "./components/componentGroups";
-import { AboutSection } from "@yext/visual-editor";
+import {Directory, DirectoryCategoryProps, mainConfig, MainConfigProps, DirectoryCategoryComponents,DirectoryCategory } from "@yext/visual-editor";
+// import { HeroConfigProps } from "./components/componentConfig";
+// import { AboutSection } from "@yext/visual-editor";
+import { HeroSectionEditor, HeroSectionEditorProps } from "./components/componentsEditor/LandingPageSections/HeroSectionEditor";
 
 /**
  * Visual Editor runtime registry.
@@ -17,23 +17,35 @@ import { AboutSection } from "@yext/visual-editor";
 
 console.log("VE CONFIG LOADED");
 
- interface LandingPageConfigProps extends MainConfigProps, HeroConfigProps {
-//  HeroConfig: HeroConfigProps
+ interface ModifiedMainConfigProps extends MainConfigProps, DirectoryCategoryProps {
+ HeroSectionEditor: HeroSectionEditorProps;
 }
 
-export const landingPageConfig: Config<LandingPageConfigProps> = {
-  components: {
+ const components: Config<ModifiedMainConfigProps>["components"] = {
+  // components: {
     ...mainConfig.components,
+    HeroSectionEditor,
+    Directory,
     // ...AboutSection,
-  },
+    // ...DirectoryCategoryComponents
+  };
 
-  categories: {
+export const ModifiedMainConfig: Config<ModifiedMainConfigProps> = {
+ components,
+ categories: {
     ...mainConfig.categories,
+    hero: {
+      title: "Hero",
+      components: ["HeroSectionEditor"],
+    },
   },
-
   root: mainConfig.root,
+
 };
 
+ 
+
+
 export const componentRegistry: Record<string, Config<any>> = {
-  "FitnessLandingPage": landingPageConfig,
+  "FitnessProgramResultsDetailPage": ModifiedMainConfig,
 };
