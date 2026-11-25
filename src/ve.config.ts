@@ -5,7 +5,7 @@ import "@yext/visual-editor/style.css";
 import "./index.css";
 
 // import {landingPageConfig} from "./config/LandingPage.config";
-import {Directory, DirectoryCategoryProps, mainConfig, MainConfigProps, DirectoryCategoryComponents,DirectoryCategory } from "@yext/visual-editor";
+import {Directory, DirectoryCategoryProps, mainConfig, MainConfigProps} from "@yext/visual-editor";
 // import { HeroConfigProps } from "./components/componentConfig";
 // import { AboutSection } from "@yext/visual-editor";
 import { HeroSectionEditor, HeroSectionEditorProps } from "./components/componentsEditor/LandingPageSections/HeroSectionEditor";
