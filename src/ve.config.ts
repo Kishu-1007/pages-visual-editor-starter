@@ -25,7 +25,7 @@ console.log("VE CONFIG LOADED");
   // components: {
     ...mainConfig.components,
     HeroSectionEditor,
-    Directory,
+    Directory
     // ...AboutSection,
     // ...DirectoryCategoryComponents
   };
@@ -38,6 +38,10 @@ export const ModifiedMainConfig: Config<ModifiedMainConfigProps> = {
       title: "Hero",
       components: ["HeroSectionEditor"],
     },
+    directory: {
+      title: "Directory",
+      components: ["Directory"],
+    },
   },
   root: mainConfig.root,
 
@@ -48,4 +52,5 @@ export const ModifiedMainConfig: Config<ModifiedMainConfigProps> = {
 
 export const componentRegistry: Record<string, Config<any>> = {
   "FitnessProgramResultsDetailPage": ModifiedMainConfig,
+  main: mainConfig,
 };
